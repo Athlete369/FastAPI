@@ -1,0 +1,15 @@
+path operations
+use postman to test our APIs
+extract data in post method
+.............def create_posts(payload:dict = Body(...)):
+The pain
+1. It is pain to get all the values from the body
+2. The client can send whatever data they want
+3. The data isn't getting validated
+4. We ultimately want to force the client to send the data in a scheme that we expect
+
+That's why we need schema
+we can use pydantic to define the schema -- this is already installed during fastapi installation
+from pydantic import BaseModel
+we can define a class for our data where we define the keys and what types of values it should contain
+order matters in APIs
